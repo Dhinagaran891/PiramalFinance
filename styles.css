@@ -1,0 +1,54 @@
+/* Main background */
+body {
+    background-color: #ffffff;
+}
+
+/* Title */
+.title {
+    color: #008000;
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+/* Subtitle */
+.subtitle {
+    color: #1e90ff;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Section headers */
+.section-header {
+    color: #008000;
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+/* General text */
+.text-blue {
+    color: #1e90ff;
+    font-size: 16px;
+}
+
+/* Submitted by box */
+.submitted-box {
+    background-color: #f8f8f8;
+    border: 2px solid black;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Submitted title */
+.submitted-title {
+    color: #008000;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Student details */
+.student-text {
+    color: #1e90ff;
+    font-size: 16px;
+}
