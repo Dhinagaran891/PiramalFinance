@@ -34,8 +34,8 @@ load_css()
 
 st.set_page_config(page_title="Piramal Finance Forecast", layout="wide")
 
-# Logos
-col1, col2 = st.columns([1,6])
+# Logos at top of page
+col1, col2 = st.columns(2)
 
 with col1:
     st.image("piramal_logo.png", width=120)
