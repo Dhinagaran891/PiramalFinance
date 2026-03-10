@@ -3,28 +3,9 @@ import pandas as pd
 import pickle
 import plotly.express as px
 
-st.title("Piramal Pharma Stock Forecast Dashboard")
+# Page configuration (must be first)
+st.set_page_config(page_title="Piramal Finance Forecast", layout="wide")
 
-# load historical data
-hist = pd.read_csv("PPLPHARMA.csv")
-
-# load forecast data
-forecast = pd.read_csv("PPLPHARMA_future_forecast (2).csv")
-
-# load model
-with open("forecast_model.pkl","rb") as f:
-    model = pickle.load(f)
-
-st.subheader("Historical Data")
-st.dataframe(hist.tail())
-
-st.subheader("Forecast Data")
-st.dataframe(forecast)
-
-fig = px.line(forecast, x="ds", y="yhat",
-              title="Forecasted Price Trend")
-
-st.plotly_chart(fig)
 # Load CSS
 def load_css():
     with open("style.css") as f:
@@ -32,9 +13,7 @@ def load_css():
 
 load_css()
 
-st.set_page_config(page_title="Piramal Finance Forecast", layout="wide")
-
-# Logos at top of page
+# Logos at top
 col1, col2 = st.columns(2)
 
 with col1:
@@ -48,29 +27,47 @@ st.markdown('<div class="title">Piramal Finance Stock Forecast Dashboard</div>',
 
 st.markdown('<div class="subtitle">AI Based Time Series Forecasting Model</div>', unsafe_allow_html=True)
 
+# Load data
+hist = pd.read_csv("PPLPHARMA.csv")
+forecast = pd.read_csv("PPLPHARMA_future_forecast (2).csv")
 
-# Graph section
+# Load model
+with open("forecast_model.pkl","rb") as f:
+    model = pickle.load(f)
+
+# Historical Data
+st.markdown('<div class="section-header">Historical Data</div>', unsafe_allow_html=True)
+st.dataframe(hist.tail())
+
+# Forecast Graph
 st.markdown('<div class="section-header">Forecast Trend</div>', unsafe_allow_html=True)
 
-fig = px.line(forecast, x="ds", y="yhat", title="Forecasted Price")
+fig = px.line(
+    forecast,
+    x="ds",
+    y="yhat",
+    title="Forecasted Price Trend"
+)
 
 st.plotly_chart(fig, use_container_width=True)
 
-# Table
+# Forecast Table
 st.markdown('<div class="section-header">Forecast Table</div>', unsafe_allow_html=True)
-
 st.dataframe(forecast)
 
-# Submitted by section
+# Prepared By section (clean professional style)
 st.markdown("""
-<div class="submitted-box">
+<div class="submitted-section">
+
 <div class="submitted-title">Prepared By</div>
+
 <div class="student-text">
 Name: Dhinagaran R <br>
-Depatrtment of MBA,
-The KAvery Engierring College, Salem.<br>
+Department: MBA <br>
+The Kavery Engineering College, Salem <br>
 Project: Stock Price Forecasting Using Machine Learning <br>
 Company: Piramal Finance
 </div>
+
 </div>
 """, unsafe_allow_html=True)
