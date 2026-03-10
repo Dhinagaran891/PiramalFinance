@@ -57,4 +57,11 @@ body {
     font-family: "Segoe UI", Arial, sans-serif;
     line-height: 1.7;
 }
+/* Logo alignment */
+[data-testid="column"]:first-child {
+    text-align: left;
+}
 
+[data-testid="column"]:last-child {
+    text-align: right;
+}
