@@ -1,17 +1,47 @@
+/* Prepared by section */
 .submitted-section{
     margin-top:40px;
     font-family: "Segoe UI", Arial, sans-serif;
 }
 
+/* Section titles */
 .submitted-title{
     font-size:22px;
     font-weight:600;
-    color:#2e7d32;
+    color:#000000;   /* black instead of green */
     margin-bottom:8px;
 }
 
+/* Student details */
 .student-text{
     font-size:16px;
-    color:#333;
+    color:#333333;
     line-height:1.7;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Dashboard main title */
+.title{
+    font-size:32px;
+    font-weight:700;
+    color:#000000;   /* black title */
+    text-align:center;
+    margin-top:10px;
+}
+
+/* Subtitle */
+.subtitle{
+    font-size:18px;
+    color:#444444;
+    text-align:center;
+    margin-bottom:30px;
+}
+
+/* Section headers */
+.section-header{
+    font-size:22px;
+    font-weight:600;
+    color:#000000;   /* black section headings */
+    margin-top:30px;
+    margin-bottom:10px;
 }
