@@ -48,8 +48,6 @@ st.markdown('<div class="title">Piramal Finance Stock Forecast Dashboard</div>',
 
 st.markdown('<div class="subtitle">AI Based Time Series Forecasting Model</div>', unsafe_allow_html=True)
 
-# Load forecast data
-forecast = pd.read_csv("forecast_data.csv")
 
 # Graph section
 st.markdown('<div class="section-header">Forecast Trend</div>', unsafe_allow_html=True)
