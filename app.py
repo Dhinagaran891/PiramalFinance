@@ -6,13 +6,13 @@ import plotly.express as px
 st.title("Piramal Pharma Stock Forecast Dashboard")
 
 # load historical data
-hist = pd.read_csv("historical_data.csv")
+hist = pd.read_csv("PPLPHARMA.csv")
 
 # load forecast data
-forecast = pd.read_csv("forecast_data.csv")
+forecast = pd.read_csv("PPLPHARMA_future_forecast(2).csv")
 
 # load model
-with open("model.pkl","rb") as f:
+with open("forecast_model.pkl","rb") as f:
     model = pickle.load(f)
 
 st.subheader("Historical Data")
