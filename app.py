@@ -9,7 +9,7 @@ st.title("Piramal Pharma Stock Forecast Dashboard")
 hist = pd.read_csv("PPLPHARMA.csv")
 
 # load forecast data
-forecast = pd.read_csv("PPLPHARMA_future_forecast(2).csv")
+forecast = pd.read_csv("PPLPHARMA_future_forecast (2).csv")
 
 # load model
 with open("forecast_model.pkl","rb") as f:
