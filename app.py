@@ -21,7 +21,7 @@ st.dataframe(hist.tail())
 st.subheader("Forecast Data")
 st.dataframe(forecast)
 
-fig = px.line(forecast, x="Date", y="Predicted_Price",
+fig = px.line(forecast, x="ds", y="yhat",
               title="Forecasted Price Trend")
 
 st.plotly_chart(fig)
