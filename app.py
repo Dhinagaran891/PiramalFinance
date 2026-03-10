@@ -66,10 +66,11 @@ st.dataframe(forecast)
 # Submitted by section
 st.markdown("""
 <div class="submitted-box">
-<div class="submitted-title">Submitted By</div>
+<div class="submitted-title">Prepared By</div>
 <div class="student-text">
-Name: Dhinagaran Ravichnahdiran <br>
-Course: MBA Financial Markets <br>
+Name: Dhinagaran R <br>
+Depatrtment of MBA,
+The KAvery Engierring College, Salem.<br>
 Project: Stock Price Forecasting Using Machine Learning <br>
 Company: Piramal Finance
 </div>
