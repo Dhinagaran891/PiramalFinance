@@ -1,15 +1,27 @@
-from prophet import Prophet
+import streamlit as st
 import pandas as pd
-import joblib
+import pickle
+import plotly.express as px
 
-# Load dataset
-df = pd.read_csv("piramal_data.csv")
+st.title("Piramal Pharma Stock Forecast Dashboard")
 
-# Train model
-model = Prophet()
-model.fit(df)
+# load historical data
+hist = pd.read_csv("historical_data.csv")
 
-# Save the model
-joblib.dump(model, "forecast_model.pkl")
+# load forecast data
+forecast = pd.read_csv("forecast_data.csv")
 
-print("Model saved successfully")
+# load model
+with open("model.pkl","rb") as f:
+    model = pickle.load(f)
+
+st.subheader("Historical Data")
+st.dataframe(hist.tail())
+
+st.subheader("Forecast Data")
+st.dataframe(forecast)
+
+fig = px.line(forecast, x="Date", y="Predicted_Price",
+              title="Forecasted Price Trend")
+
+st.plotly_chart(fig)
