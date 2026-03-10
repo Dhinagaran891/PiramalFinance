@@ -59,10 +59,10 @@ st.dataframe(forecast)
 st.markdown("""
 <div class="submitted-section">
 
-<div class="submitted-title">Prepared By</div>
+<div class="submitted-title">Prepared By :</div>
 
 <div class="student-text">
-Name: Dhinagaran R <br>
+Name: Dhinagaran R (612724631012)<br>
 Department: MBA <br>
 The Kavery Engineering College, Salem <br>
 Project: Stock Price Forecasting Using Machine Learning <br>
