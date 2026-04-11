@@ -1,76 +1,96 @@
-/* Prepared by section */
-.submitted-section{
-    margin-top:40px;
-    font-family: "Segoe UI", Arial, sans-serif;
+/* Import modern IBM-like font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Global */
+body{
+    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+    background-color:#f4f6f8;
+    color:#161616;
 }
 
-/* Section titles */
-.submitted-title{
-    font-size:22px;
-    font-weight:600;
-    color:#000000;   /* black instead of green */
-    margin-bottom:8px;
-}
-
-/* Student details */
-.student-text{
-    font-size:16px;
-    color:#333333;
-    line-height:1.7;
-    font-family: "Segoe UI", Arial, sans-serif;
-}
-
-/* Dashboard main title */
-.title{
-    font-size:32px;
-    font-weight:700;
-    color:#000000;   /* black title */
-    text-align:center;
-    margin-top:10px;
-}
-
-/* Subtitle */
-.subtitle{
-    font-size:18px;
-    color:#444444;
-    text-align:center;
-    margin-bottom:30px;
-}
-
-/* Section headers */
-.section-header{
-    font-size:22px;
-    font-weight:600;
-    color:#000000;   /* black section headings */
-    margin-top:30px;
-    margin-bottom:10px;
-}
-/* Dashboard spacing */
+/* Main container */
 .main{
-    padding-top:20px;
+    padding:40px 60px;
 }
 
-/* Section headers */
-.section-header{
-    font-size:24px;
-    font-weight:600;
-    margin-top:30px;
-    margin-bottom:15px;
-    color:#000;
-}
-
-/* Title */
+/* Title (like consulting slide heading) */
 .title{
     font-size:36px;
     font-weight:700;
     text-align:center;
-    margin-top:10px;
+    color:#0f62fe;   /* IBM Blue */
+    margin-bottom:6px;
+    letter-spacing:0.3px;
 }
 
 /* Subtitle */
 .subtitle{
     font-size:18px;
     text-align:center;
-    color:#444;
-    margin-bottom:30px;
+    color:#525252;
+    margin-bottom:40px;
+}
+
+/* Section container (clean card) */
+.submitted-section{
+    margin-top:30px;
+    padding:25px 30px;
+    background:#ffffff;
+    border-left:5px solid #0f62fe;  /* IBM signature accent */
+    border-radius:6px;
+    box-shadow:0 2px 6px rgba(0,0,0,0.04);
+}
+
+/* Section titles */
+.submitted-title{
+    font-size:20px;
+    font-weight:600;
+    color:#161616;
+    margin-bottom:12px;
+}
+
+/* Student / content text */
+.student-text{
+    font-size:15.5px;
+    color:#4d4d4d;
+    line-height:1.8;
+}
+
+/* Section headers (like slide sections) */
+.section-header{
+    font-size:22px;
+    font-weight:600;
+    margin-top:40px;
+    margin-bottom:15px;
+    color:#161616;
+    border-bottom:1px solid #e0e0e0;
+    padding-bottom:6px;
+}
+
+/* KPI / Info Cards */
+.card{
+    background:#ffffff;
+    padding:20px;
+    border-radius:6px;
+    border:1px solid #e0e0e0;
+    margin-bottom:20px;
+    transition:0.2s ease;
+}
+
+/* Card hover (subtle, professional) */
+.card:hover{
+    border-color:#0f62fe;
+}
+
+/* Highlight (for key metrics) */
+.highlight{
+    color:#0f62fe;
+    font-weight:600;
+}
+
+/* Divider */
+.divider{
+    height:1px;
+    background:#e0e0e0;
+    margin:30px 0;
 }
